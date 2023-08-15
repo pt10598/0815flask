@@ -1,13 +1,11 @@
-from flask import Flask, jsonify
-import os
+from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-
 @app.route('/')
-def index():
-    return "Welcome"
+def formPage():
+    return "TEST"
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=1000))
+    app.run(host="0.0.0.0",port=5000)
